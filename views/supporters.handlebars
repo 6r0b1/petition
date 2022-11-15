@@ -1,0 +1,10 @@
+<h2>Thanks</h2>
+<p>Here is everybody else</p>
+{{#supporters}}
+    {{#each list}}
+        <p>{{#if website}}<a href="https://{{website}}">{{firstname}}
+                    {{lastname}}</a>{{else}}{{firstname}} {{lastname}}{{/if}}
+            {{age}}
+            {{#if city}}<a href="/supporters/{{city}}">{{city}}</a>{{/if}}</p>
+    {{/each}}
+{{/supporters}}

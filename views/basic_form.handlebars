@@ -1,0 +1,23 @@
+<h1>Hello!</h1>
+<h2>Would you like some cookies?</h2>
+<form method="POST">
+    {{#userData}}
+        {{errorReadingForm}}
+        <input type="text" name="first_name" value="{{first_name}}" />
+        <input type="text" name="last_name" value="{{last_name}}" />
+    {{/userData}}
+    <input type="checkbox" name="waiver" id="" />
+    <p>
+        I understand that by signing this petition I waive my basic human right
+        to privacy.
+    </p>
+    <canvas
+        id="can"
+        width="400"
+        height="250"
+        style="border:2px solid;"
+    ></canvas>
+    <input type="hidden" id="signature" name="signature" />
+
+    <button type="submit">GO!</button>
+</form>

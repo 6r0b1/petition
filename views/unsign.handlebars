@@ -1,0 +1,15 @@
+<h1>Sad to see you go!</h1>
+<h2>Would you reall like to unsign?</h2>
+<form method="POST">
+
+    {{#userData}}
+        {{errorReadingForm}}
+    {{/userData}}
+
+    <input type="checkbox" name="waiver" id="" />
+    <p>
+        Yes, please remove my support. I trust that you really will.
+    </p>
+
+    <button type="submit">Unsign</button>
+</form>

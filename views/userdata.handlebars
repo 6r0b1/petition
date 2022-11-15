@@ -1,0 +1,18 @@
+<h1>Hello!</h1>
+<h2>Something changed about your personal data?</h2>
+<form method="POST">
+    {{#userData}}
+        {{errorReadingForm}}
+
+        <input type="text" name="first_name" value="{{first_name}}" />
+        <input type="text" name="last_name" value="{{last_name}}" />
+        <input type="text" name="email" value="{{email}}" />
+        <input type="text" name="password" placeholder="New Password" />
+        <input type="text" name="age"  {{#if age}}value="{{age}}"{{else}} placeholder="Age"{{/if}}/>
+        <input type="text" name="city"  {{#if city}}value="{{city}}"{{else}} placeholder="City"{{/if}}/>
+        <input type="text" name="website"  {{#if website}}value="{{website}}"{{else}} placeholder="Website"{{/if}}/>
+        <button type="submit">UPDATE</button>
+
+    {{/userData}}
+</form>
+<a href="/delete-account">Delete Your Account</a>

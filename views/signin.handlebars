@@ -1,0 +1,29 @@
+<header>
+    <h1>${Petition}</h1>
+    <div id="menu">Need an account? <a href="/registration">SIGN UP</a></div>
+</header>
+<section>
+    <h2 class="welcome">Please sign in!</h2>
+    <p class="welcome">Please provide the credentials you created below.</p>
+    <form method="POST">
+        {{#userFeedback}}
+            {{errorReadingForm}}
+        {{/userFeedback}}
+
+        <input
+            class="form-field"
+            type="email"
+            name="email"
+            placeholder="Your E-Mail Address"
+        />
+        <input
+            class="form-field"
+            type="text"
+            name="password"
+            placeholder="Password"
+        />
+
+        <button class="form-submit" type="submit">SIGN IN!</button>
+
+    </form>
+</section>

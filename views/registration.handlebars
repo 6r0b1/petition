@@ -1,0 +1,49 @@
+<header>
+    <h1>${Petition}</h1>
+    <div id="menu">Already have an account? <a href="/signin">SIGN IN</a></div>
+</header>
+<section>
+    <h2 class="welcome">Hello!</h2>
+    <p class="welcome">We understand you are interested in the topic of
+        <i>(insert absolutely unreasonable request to government or other
+            non-human entty here)</i>.</p>
+    <form method="POST">
+        {{#userFeedback}}
+            {{errorReadingForm}}
+
+            <input
+                class="form-field"
+                type="text"
+                name="first_name"
+                placeholder="First Name"
+            />{{firstName}}
+            <input
+                class="form-field"
+                type="text"
+                name="last_name"
+                placeholder="Last Name"
+            />{{lastName}}
+            <input
+                class="form-field"
+                type="text"
+                name="email"
+                placeholder="Your E-Mail Address"
+            />{{#if email}}{{email}}{{else}}{{emailfail}}{{/if}}{{emailInUse}}
+            <input
+                class="form-field"
+                type="text"
+                name="password"
+                placeholder="Password"
+            />{{#if password}}{{password}}{{else}}{{passwordMatch}}{{/if}}
+            <input
+                class="form-field"
+                type="text"
+                name="password_rep"
+                placeholder="Repeat your Paassword"
+            />{{passwordRep}}
+
+            <button class="form-submit" type="submit">SIGN UP!</button>
+
+        {{/userFeedback}}
+    </form>
+</section>
