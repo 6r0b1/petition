@@ -1,16 +1,24 @@
-<h1>Sad to see you go!</h1>
-<h2>Would you reall like to dlete your account?</h2>
-<form method="POST">
+<header>
+    <h1>${Petition}</h1>
+    <div id="menu">
+        <a href="/userdata">YOUR PROFILE</a></div>
+</header>
+<section>
+    <h2 class="welcome">Sad to see you go.</h2>
+    <p class="welcome">Please confirm that you indeed intended to delete your
+        account. There is no coming back from this, you know?</p>
+    <form method="POST">
 
-    {{#userData}}
-        {{errorReadingForm}}
-    {{/userData}}
+        {{#userData}}
+            {{errorReadingForm}}
+        {{/userData}}
 
-    <input type="checkbox" name="waiver" id="" />
-    <p>
-        Yes, please delete my account. This will also remove my support from the
-        Petition.
-    </p>
+        <input class="waiver_checkbox" type="checkbox" name="waiver" id="" />
+        <p class="waiver">
+            Yes, please delete my account. This will also remove my support from
+            the Petition.
+        </p>
 
-    <button type="submit">Delete 4-ever</button>
-</form>
+        <button class="form-submit" type="submit">Delete 4-ever</button>
+    </form>
+</section>

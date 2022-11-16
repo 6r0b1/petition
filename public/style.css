@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: "Courier New", Courier, monospace;
+    /* border: 2px solid; */
 }
 
 body {
@@ -51,18 +52,38 @@ section {
     display: block;
     height: 25px;
     width: 300px;
-    margin: 15px;
+    margin: 15px 0;
+    padding: 7px;
+}
+
+.waiver_checkbox {
+    margin-left: 5px;
+}
+
+.waiver {
+    display: block;
+    width: 300px;
+    margin-bottom: 15px;
     padding: 7px;
 }
 
 .form-submit {
     display: block;
     /* height: 28px; */
-    margin: 15px;
+    margin: 15px 2px;
     padding-top: 4px;
     padding-bottom: 4px;
     padding-left: 7px;
     padding-right: 7px;
+}
+
+#can {
+    display: block;
+    height: 150px;
+    width: 300px;
+    border: 2px solid;
+    background-color: #fff;
+    margin: 15px 0;
 }
 
 footer {

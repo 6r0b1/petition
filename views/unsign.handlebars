@@ -1,15 +1,22 @@
-<h1>Sad to see you go!</h1>
-<h2>Would you reall like to unsign?</h2>
-<form method="POST">
+<header>
+    <h1>${Petition}</h1>
+    <div id="menu">
+        <a href="/userdata">YOUR PROFILE</a></div>
+</header>
+<section>
+    <h2 class="welcome">Please don't!</h2>
+    <p class="welcome">But if you have to, it's also okay.</p>
+    <form method="POST">
 
-    {{#userData}}
-        {{errorReadingForm}}
-    {{/userData}}
+        {{#userData}}
+            {{errorReadingForm}}
+        {{/userData}}
 
-    <input type="checkbox" name="waiver" id="" />
-    <p>
-        Yes, please remove my support. I trust that you really will.
-    </p>
+        <input class="waiver_checkbox" type="checkbox" name="waiver" id="" />
+        <p class="waiver">
+            Yes, please remove my support. I trust that you really will.
+        </p>
 
-    <button type="submit">Unsign</button>
-</form>
+        <button class="form-submit" type="submit">Unsign</button>
+    </form>
+</section>

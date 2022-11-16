@@ -5,12 +5,19 @@
 </header>
 <section>
     <h2 class="welcome">You are nor alone!</h2>
-    <p class="welcome">Here is everybody else who signed. So you know that we take privacy really seriously!</p>
-{{#supporters}}
-    {{#each list}}
-        <p>{{#if website}}<a href="https://{{website}}">{{firstname}}
-                    {{lastname}}</a>{{else}}{{firstname}} {{lastname}}{{/if}}
-            {{age}}
-            {{#if city}}<a href="/supporters/{{city}}">{{city}}</a>{{/if}}</p>
-    {{/each}}
-{{/supporters}}
+    <p class="welcome">Here is everybody else who signed. So you know that we
+        take privacy really seriously!</p>
+    {{#supporters}}
+        {{#each list}}
+            <p class="welcome">{{#if website}}<a
+                        href="https://{{website}}"
+                    >{{firstname}}
+                        {{lastname}}</a>{{else}}{{firstname}}
+                    {{lastname}}{{/if}}
+                {{age}}
+                {{#if city}}<a
+                        href="/supporters/{{city}}"
+                    >{{city}}</a>{{/if}}</p>
+        {{/each}}
+    {{/supporters}}
+</section>
