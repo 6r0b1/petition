@@ -53,7 +53,7 @@ function createProfile({ userID, age, city, website, timeStamp }) {
 // ALL supporters
 function getSupporters() {
     return db.query(
-        "SELECT users.firstname, users.lastname, user_profiles.age, user_profiles.city, user_profiles.website FROM users JOIN user_profiles ON users.id = user_profiles.user_id"
+        "SELECT users.firstname, users.lastname, user_profiles.age, user_profiles.city, user_profiles.website FROM users FULL OUTER JOIN user_profiles ON users.id = user_profiles.user_id"
     );
     // .then((result) => console.log(result));
 }
