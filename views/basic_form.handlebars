@@ -1,23 +1,46 @@
-<h1>Hello!</h1>
-<h2>Would you like some cookies?</h2>
-<form method="POST">
-    {{#userData}}
-        {{errorReadingForm}}
-        <input type="text" name="first_name" value="{{first_name}}" />
-        <input type="text" name="last_name" value="{{last_name}}" />
-    {{/userData}}
-    <input type="checkbox" name="waiver" id="" />
-    <p>
-        I understand that by signing this petition I waive my basic human right
-        to privacy.
-    </p>
-    <canvas
-        id="can"
-        width="400"
-        height="250"
-        style="border:2px solid;"
-    ></canvas>
-    <input type="hidden" id="signature" name="signature" />
+<header>
+    <h1>${Petition}</h1>
+    <div id="menu">
+        <a href="/userdata">YOUR PROFILE</a></div>
+</header>
+<section>
+    <h2 class="welcome">You made it!</h2>
+    <p class="welcome">Congrats, you are now in the uniqu position to ask s. th.
+        really unreasonable from sombody else.</p>
+    <form method="POST">
+        {{#userData}}
+            {{errorReadingForm}}
+            <input
+                class="form-field"
+                type="text"
+                name="first_name"
+                value="{{first_name}}"
+            />
+            <input
+                class="form-field"
+                type="text"
+                name="last_name"
+                value="{{last_name}}"
+            />
+        {{/userData}}
+        <input type="checkbox" name="waiver" id="" />
+        <p class="form-field">
+            I understand that by signing this petition I waive my basic human
+            right to privacy.
+        </p>
+        <canvas
+            id="can"
+            width="300"
+            height="250"
+            style="border:2px solid;"
+        ></canvas>
+        <input
+            class="form-field"
+            type="hidden"
+            id="signature"
+            name="signature"
+        />
 
-    <button type="submit">GO!</button>
-</form>
+        <button class="form-submit" type="submit">GO!</button>
+    </form>
+</section>

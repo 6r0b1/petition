@@ -1,7 +1,20 @@
-<h2>Thanks</h2>
-{{#supporters}}
-    <img src="{{currentSignature}}" alt="" />
-    <a href="/supporters">See all {{amount}} signing supporters</a>
-{{/supporters}}
-<a href="/userdata">Update your profile</a>
-<a href="/unsign">Remove your support</a>
+<header>
+    <h1>${Petition}</h1>
+    <div id="menu">
+        <a href="/userdata">YOUR PROFILE</a></div>
+</header>
+<section>
+    <h2 class="welcome">Thank you for signing!</h2>
+
+    {{#supporters}}
+        <img src="{{currentSignature}}" alt="" />
+        <p class="welcome">Maybe now you would like to do one ore more of the
+            following things?.</p>
+        <a class="welcome" href="/supporters">See all
+            {{amount}}
+            signing supporters</a>
+    {{/supporters}}
+
+    <a class="welcome" href="/userdata">Update your profile</a>
+    <a class="welcome" href="/unsign">Remove your support</a>
+</section>
