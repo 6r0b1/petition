@@ -28,8 +28,13 @@ h1 {
 }
 
 #menu {
+    display: flex;
     margin: 20px;
     font-weight: bold;
+}
+
+#logout {
+    margin-left: 25px;
 }
 
 section {
@@ -97,4 +102,10 @@ section {
 footer {
     height: 10vh;
     background-color: #fff;
+}
+
+#logo {
+    height: 8vh;
+    width: 50px;
+    background-image: url(./fabflam.png);
 }

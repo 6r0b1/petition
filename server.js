@@ -423,6 +423,11 @@ app.post("/delete-account", (req, res) => {
     res.redirect("/");
 });
 
+app.get("/logout", (req, res) => {
+    req.session = null;
+    res.redirect("/");
+});
+
 app.listen(8080, () => {
     console.log("listening");
 });
