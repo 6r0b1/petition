@@ -133,8 +133,8 @@ app.post("/registration", (req, res) => {
             };
             res.redirect("/profiledata");
         })
-        .catch(() => {
-            console.log("here");
+        .catch((e) => {
+            console.log(e);
             formError.emailInUse = "This Email Address is already in use";
             res.render("registration", { userFeedback: formError });
             console.log(formError);
