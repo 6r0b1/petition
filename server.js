@@ -116,7 +116,7 @@ app.post("/registration", (req, res) => {
     const password = req.body.password;
     const salt = bcrypt.genSaltSync();
     const hash = bcrypt.hashSync(password, salt);
-
+    console.log(req.body);
     addUser({
         firstName: req.body.first_name,
         lastName: req.body.last_name,
