@@ -8,7 +8,7 @@ const bcrypt = require("bcryptjs");
 const checkMail = require("email-validator");
 
 require("dotenv").config();
-const { PASSPHRASE } = process.env;
+const { PASSPHRASE, DATABASE_URL } = process.env;
 
 const {
     removeUserByID,
@@ -135,7 +135,7 @@ app.post("/registration", (req, res) => {
         })
         .catch((e) => {
             console.log(e);
-            formError.emailInUse = `This Email Address is already in use: ${e}`;
+            formError.emailInUse = `This Email Address is already in use: ${DATABASE_URL}`;
             res.render("registration", { userFeedback: formError });
             console.log(formError);
             return;
