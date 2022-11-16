@@ -52,8 +52,16 @@ section {
     display: block;
     height: 25px;
     width: 300px;
-    margin: 15px 0;
+    margin-bottom: 15px;
     padding: 7px;
+}
+
+.form-label {
+    display: block;
+    width: 300px;
+    margin-top: 15px;
+    margin-bottom: 3px;
+    padding-left: 7px;
 }
 
 .waiver_checkbox {

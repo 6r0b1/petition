@@ -9,14 +9,20 @@
 <form method="POST">
     {{#userData}}
         {{errorReadingForm}}
-
+        <p class="form-label">{{#if firstName}}{{firstName}}{{else}}First Name{{/if}}</p>
         <input class="form-field" type="text" name="first_name" value="{{first_name}}" />
+        <p class="form-label">{{#if lastName}}{{lastName}}{{else}}Last Name{{/if}}</p>
         <input class="form-field" type="text" name="last_name" value="{{last_name}}" />
+        <p class="form-label">Email</p>
         <input class="form-field" type="text" name="email" value="{{email}}" />
+        <p class="form-label">Set new password</p>
         <input class="form-field" type="text" name="password" placeholder="New Password" />
+        <p class="form-label">Your age</p>
         <input class="form-field" type="text" name="age"  {{#if age}}value="{{age}}"{{else}} placeholder="Age"{{/if}}/>
+        <p class="form-label">Your City</p>
         <input class="form-field" type="text" name="city"  {{#if city}}value="{{city}}"{{else}} placeholder="City"{{/if}}/>
-        <input class="form-field" type="text" name="website"  {{#if website}}value="{{website}}"{{else}} placeholder="Website"{{/if}}/>
+        <p class="form-label">Your website:<br />https://</p>
+        <input class="form-field" type="text" name="website"  {{#if website}}value="{{website}}"{{else}} placeholder="www.example.de"{{/if}}/>
         <button class="form-submit" type="submit">UPDATE</button>
 
     {{/userData}}

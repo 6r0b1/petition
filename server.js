@@ -8,7 +8,7 @@ const bcrypt = require("bcryptjs");
 const checkMail = require("email-validator");
 
 require("dotenv").config();
-const { PASSPHRASE, DATABASE_URL } = process.env;
+const { PASSPHRASE } = process.env;
 
 const {
     removeUserByID,
@@ -116,7 +116,7 @@ app.post("/registration", (req, res) => {
     const password = req.body.password;
     const salt = bcrypt.genSaltSync();
     const hash = bcrypt.hashSync(password, salt);
-    console.log(req.body);
+
     addUser({
         firstName: req.body.first_name,
         lastName: req.body.last_name,
@@ -133,9 +133,9 @@ app.post("/registration", (req, res) => {
             };
             res.redirect("/profiledata");
         })
-        .catch((e) => {
-            console.log(e);
-            formError.emailInUse = `This Email Address is already in use: ${DATABASE_URL}`;
+        .catch(() => {
+            console.log("here");
+            formError.emailInUse = "This Email Address is already in use";
             res.render("registration", { userFeedback: formError });
             console.log(formError);
             return;
@@ -279,6 +279,7 @@ app.get("/thanks", (req, res) => {
 
         .then(() => getSupporters())
         .then((result) => {
+            console.log(result);
             //  Create handlebars object for thank you message
             (supporters.list = result.rows),
                 (supporters.amount = result.rowCount);
@@ -385,7 +386,9 @@ app.post("/userdata", (req, res) => {
             let updateUserProfile = {
                 user_id: req.session.userData.id,
                 age: req.body.age,
-                city: req.body.city,
+                city:
+                    req.body.city.charAt(0).toUpperCase() +
+                    req.body.city.slice(1),
                 website: req.body.website,
             };
             console.log("update date:", req.body);

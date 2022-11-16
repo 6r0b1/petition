@@ -9,7 +9,8 @@
         really unreasonable from sombody else.</p>
     <form method="POST">
         {{#userData}}
-            {{errorReadingForm}}
+            <p class="welcome">{{#if errorReadingForm}}Make sure you have entrys
+                    in all the fields!{{/if}}</p>
             <input
                 class="form-field"
                 type="text"

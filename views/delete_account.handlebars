@@ -10,7 +10,7 @@
     <form method="POST">
 
         {{#userData}}
-            {{errorReadingForm}}
+            <p class="welcome">{{#if errorReadingForm}}Pls. check the box!{{/if}}</p>
         {{/userData}}
 
         <input class="waiver_checkbox" type="checkbox" name="waiver" id="" />

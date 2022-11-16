@@ -9,38 +9,43 @@
             non-human entty here)</i>.</p>
     <form method="POST">
         {{#userFeedback}}
-            {{errorReadingForm}}
-
+            <p class="welcome">{{errorReadingForm}}</p>
+            <p class="form-label">{{#if firstName}}{{firstName}}{{else}}First
+                    Name{{/if}}</p>
             <input
                 class="form-field"
                 type="text"
                 name="first_name"
-                placeholder="First Name"
-            />{{firstName}}
+                placeholder=""
+            />
+            <p class="form-label">{{#if lastName}}{{lastName}}{{else}}Last Name{{/if}}</p>
             <input
                 class="form-field"
                 type="text"
                 name="last_name"
-                placeholder="Last Name"
-            />{{lastName}}
+                placeholder=""
+            />
+            <p class="form-label">Email</p>
             <input
                 class="form-field"
                 type="text"
                 name="email"
-                placeholder="Your E-Mail Address"
-            />{{#if email}}{{email}}{{else}}{{emailfail}}{{/if}}{{emailInUse}}
+                placeholder={{#if email}}"{{email}}"{{else}}"{{emailfail}}"{{/if}}"{{emailInUse}}"
+            />
+            <p class="form-label">Password</p>
             <input
                 class="form-field"
                 type="text"
                 name="password"
-                placeholder="Password"
-            />{{#if password}}{{password}}{{else}}{{passwordMatch}}{{/if}}
+                placeholder="{{#if password}}{{password}}{{else}}{{passwordMatch}}{{/if}}"
+            />
+            <p class="form-label">Repeat Password</p>
             <input
                 class="form-field"
                 type="text"
                 name="password_rep"
-                placeholder="Repeat your Paassword"
-            />{{passwordRep}}
+                placeholder="{{passwordRep}}"
+            />
 
             <button class="form-submit" type="submit">SIGN UP!</button>
 
